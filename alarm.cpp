@@ -1,7 +1,7 @@
 
 
-unsigned char Alarm::getAlarm(unsigned char jam,unsigned char menit){
-    int compare = (jam*60) + menit;
+unsigned char Alarm::getAlarm(){
+    int compare = (Alarm::jam*60) + Alarm::menit;
     unsigned char status;
     switch (compare){
         case Alarm::suruq:
@@ -34,6 +34,7 @@ unsigned char Alarm::getAlarm(unsigned char jam,unsigned char menit){
         default:
             break;
     }
+    return staus;
 }
 void Alarm::setSubuh(unsigned char jam,unsigned char menit){
     Alarm::subuh = (jam*60) + menit;
@@ -54,7 +55,7 @@ void Alarm::setImsya(unsigned char jam,unsigned char menit){
     Alarm::imsya = (jam*60) + menit;
 }
 
-Alarm::Alarm(/* args */)
+Alarm::Alarm(unsigned char &jam,unsigned char &menit)
 {
 }
 

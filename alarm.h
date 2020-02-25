@@ -2,11 +2,12 @@ class Alarm
 {
 private:
     /* data */
+    unsigned char jam,menit;
     int subuh,dzuhur,ashar,maghrib,isya,imsya,suruq;
 public:
-    Alarm(/* args */);
+    Alarm(unsigned char &jam,unsigned char &menit);
     ~Alarm();
-    unsigned char getAlarm(unsigned char jam , unsigned char menit);
+    unsigned char getAlarm();
     void setSubuh(unsigned char jam , unsigned char menit);
     void setDzuhur(unsigned char jam , unsigned char menit);
     void setAshar(unsigned char jam , unsigned char menit);
